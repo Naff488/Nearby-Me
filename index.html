@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearby Hero</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <style>
+        .header {
+            background-color: #FF0000; 
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #map { 
+            height: 500px; 
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        
+        
+        .route-btn {
+            background-color: #524242; 
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nearby Hero</h1>
+    </div>
+    
+    <div class="container">
+        <div class="emergency-contacts">
+            <h2>We're Here to Help You</h2>
+            <p class="help-message">These numbers are available 24/7. Don't hesitate to call if you need help.</p>
+            <div class="contacts-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">🚑</div>
+                    <h3>Ambulance</h3>
+                    <p>For immediate medical help</p>
+                    <a href="tel:108" class="contact-number">108</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">👮</div>
+                    <h3>Police</h3>
+                    <p>For your safety & security</p>
+                    <a href="tel:100" class="contact-number">100</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🚒</div>
+                    <h3>Fire Force</h3>
+                    <p>Quick response team</p>
+                    <a href="tel:101" class="contact-number">101</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🏥</div>
+                    <h3>Women's Safety Helpline</h3>
+                    <p>24/7 support & assistance</p>
+                    <a href="tel:1091" class="contact-number">1091</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🚨</div>
+                    <h3>Disaster Support</h3>
+                    <p>Emergency assistance</p>
+                    <a href="tel:1070" class="contact-number">1070</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">🆘</div>
+                    <h3>Child Safety Helpline</h3>
+                    <p>Always here to protect</p>
+                    <a href="tel:1098" class="contact-number">1098</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-buttons">
+            <button class="route-btn" onclick="findCurrentLocation('hospitals')">Find Nearby Hospitals</button>
+            <button class="route-btn" onclick="findCurrentLocation('police')">Find Nearby Police Stations</button>
+            <button class="route-btn" onclick="findCurrentLocation('fire_station')">Find Nearby Fire Stations</button>
+            <button class="route-btn" onclick="findCurrentLocation('pharmacy')">Find Nearby Pharmacies</button>
+        </div>
+
+        <div id="map"></div>
+        <div id="hospital-list"></div>
+        <div id="route-info"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

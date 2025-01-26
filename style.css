@@ -1,0 +1,205 @@
+.emergency-contacts {
+    margin-bottom: 30px;
+    background: rgb(243, 226, 226);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 30px;
+    overflow-x: auto; 
+}
+
+.emergency-contacts h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contacts-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px;
+    min-width: min-content; 
+}
+
+.contact-card {
+    flex: 0 0 auto; 
+    width: 150px; 
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+    font-size: 5em;
+    margin-bottom: 5px;
+}
+
+.contact-card h3 {
+    color: #333;
+    margin: 6px 0;
+    font-size: 1em;
+    white-space: nowrap; 
+}
+
+.contact-number {
+    display: inline-block;
+    background-color: #FF0000;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-number:hover {
+    background-color: #CC0000;
+}
+
+@media (max-width: 768px) {
+    .emergency-contacts {
+        margin: 0 -20px 30px -20px; 
+        border-radius: 0;
+    }
+    
+    .contacts-grid {
+        padding: 10px 20px;
+        justify-content: flex-start; 
+    
+    .contact-card {
+        width: 130px; 
+    }
+    
+    .emergency-contacts::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        background: linear-gradient(to right, transparent, rgba(198, 196, 196, 0.9));
+        pointer-events: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts-grid {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .contact-card {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+.service-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.service-buttons .route-btn {
+    flex: 1;
+    min-width: max-content;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .service-buttons {
+        padding-bottom: 20px;
+    }
+    
+    .service-buttons .route-btn {
+        padding: 20px 20px;
+        font-size: 1.5em;
+    }
+}
+
+
+.service-info {
+    flex: 1;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.status-badge {
+    font-size: 0.8em;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.status-badge.open {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.closed {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.service-details {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.service-details p {
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.timing-info {
+    color: #666;
+}
+
+.distance-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    color: #666;
+}
+
+.detail-icon {
+    font-size: 1.9em;
+    opacity: 0.8;
+}
+
+
+.hospital-item:hover {
+    background-color: #f8f9fa;
+    transition: background-color 0.2s ease;
+}
+
+
+@media (max-width: 768px) {
+    .service-header {
+        flex-wrap: wrap;
+    }
+    
+    .status-badge {
+        font-size: 0.9em;
+    }
+}
