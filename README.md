@@ -10,7 +10,7 @@
 - Member 3: Fathima Hadiya - LBS College of Engineering, kasaragod
 
 ### Hosted Project Link
-https://Naff488.github.io/Nearby me/
+https://naff488.github.io/Nearby me/
 
 ### Project Description
 it is an emergency services locator. People who struggle to find nearby help and resources during emergencies face a lack of awareness can lead to delayed response times and inadequate care. It's a website with a map-based view of nearby emergency resources, can provide a solution.
